@@ -62,7 +62,11 @@ class CategoryPickerViewController: UITableViewController {
       } else {
         cell.accessoryType = .none
       }
-      return cell
+      let selection = UIView(frame: CGRect.zero)
+      selection.backgroundColor = UIColor(white: 1.0, alpha: 0.3)
+      cell.selectedBackgroundView = selection
+    
+    return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
